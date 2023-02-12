@@ -1,0 +1,13 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+
+gradlePlugin{
+    plugins {
+        my {
+            id = 'myTestPlugin'
+            implementationClass = 'ru.clevertec.plugins.myTestPlugin'
+        }
+    }
+}
+

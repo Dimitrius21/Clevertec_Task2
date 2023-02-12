@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'myTestPlugin'
+}
+
+group 'ru.clevertec.mp'
+version '1.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':core')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+myTestTask{
+    myTask()
+}
+
+myTestTask.dependsOn test
